@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7E4B8B81CE7624D001A8253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4B8B71CE7624D001A8253 /* AppDelegate.swift */; };
+		A7E4B8BA1CE7624D001A8253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4B8B91CE7624D001A8253 /* ViewController.swift */; };
+		A7E4B8BD1CE7624D001A8253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E4B8BB1CE7624D001A8253 /* Main.storyboard */; };
+		A7E4B8BF1CE7624D001A8253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E4B8BE1CE7624D001A8253 /* Assets.xcassets */; };
+		A7E4B8C21CE7624D001A8253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E4B8C01CE7624D001A8253 /* LaunchScreen.storyboard */; };
+		A7E4B8CD1CE7624D001A8253 /* Bingo_for_WWDCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4B8CC1CE7624D001A8253 /* Bingo_for_WWDCTests.swift */; };
+		A7E4B8D81CE7624D001A8253 /* Bingo_for_WWDCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4B8D71CE7624D001A8253 /* Bingo_for_WWDCUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7E4B8C91CE7624D001A8253 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7E4B8AC1CE7624D001A8253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7E4B8B31CE7624D001A8253;
+			remoteInfo = "Bingo for WWDC";
+		};
+		A7E4B8D41CE7624D001A8253 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7E4B8AC1CE7624D001A8253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7E4B8B31CE7624D001A8253;
+			remoteInfo = "Bingo for WWDC";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A7E4B8B41CE7624D001A8253 /* Bingo for WWDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bingo for WWDC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E4B8B71CE7624D001A8253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7E4B8B91CE7624D001A8253 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A7E4B8BC1CE7624D001A8253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A7E4B8BE1CE7624D001A8253 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7E4B8C11CE7624D001A8253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7E4B8C31CE7624D001A8253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7E4B8C81CE7624D001A8253 /* Bingo for WWDCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bingo for WWDCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E4B8CC1CE7624D001A8253 /* Bingo_for_WWDCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bingo_for_WWDCTests.swift; sourceTree = "<group>"; };
+		A7E4B8CE1CE7624D001A8253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7E4B8D31CE7624D001A8253 /* Bingo for WWDCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bingo for WWDCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E4B8D71CE7624D001A8253 /* Bingo_for_WWDCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bingo_for_WWDCUITests.swift; sourceTree = "<group>"; };
+		A7E4B8D91CE7624D001A8253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7E4B8B11CE7624D001A8253 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7E4B8C51CE7624D001A8253 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7E4B8D01CE7624D001A8253 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7E4B8AB1CE7624D001A8253 = {
+			isa = PBXGroup;
+			children = (
+				A7E4B8B61CE7624D001A8253 /* Bingo for WWDC */,
+				A7E4B8CB1CE7624D001A8253 /* Bingo for WWDCTests */,
+				A7E4B8D61CE7624D001A8253 /* Bingo for WWDCUITests */,
+				A7E4B8B51CE7624D001A8253 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7E4B8B51CE7624D001A8253 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7E4B8B41CE7624D001A8253 /* Bingo for WWDC.app */,
+				A7E4B8C81CE7624D001A8253 /* Bingo for WWDCTests.xctest */,
+				A7E4B8D31CE7624D001A8253 /* Bingo for WWDCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7E4B8B61CE7624D001A8253 /* Bingo for WWDC */ = {
+			isa = PBXGroup;
+			children = (
+				A7E4B8B71CE7624D001A8253 /* AppDelegate.swift */,
+				A7E4B8B91CE7624D001A8253 /* ViewController.swift */,
+				A7E4B8BB1CE7624D001A8253 /* Main.storyboard */,
+				A7E4B8BE1CE7624D001A8253 /* Assets.xcassets */,
+				A7E4B8C01CE7624D001A8253 /* LaunchScreen.storyboard */,
+				A7E4B8C31CE7624D001A8253 /* Info.plist */,
+			);
+			path = "Bingo for WWDC";
+			sourceTree = "<group>";
+		};
+		A7E4B8CB1CE7624D001A8253 /* Bingo for WWDCTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7E4B8CC1CE7624D001A8253 /* Bingo_for_WWDCTests.swift */,
+				A7E4B8CE1CE7624D001A8253 /* Info.plist */,
+			);
+			path = "Bingo for WWDCTests";
+			sourceTree = "<group>";
+		};
+		A7E4B8D61CE7624D001A8253 /* Bingo for WWDCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A7E4B8D71CE7624D001A8253 /* Bingo_for_WWDCUITests.swift */,
+				A7E4B8D91CE7624D001A8253 /* Info.plist */,
+			);
+			path = "Bingo for WWDCUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7E4B8B31CE7624D001A8253 /* Bingo for WWDC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7E4B8DC1CE7624D001A8253 /* Build configuration list for PBXNativeTarget "Bingo for WWDC" */;
+			buildPhases = (
+				A7E4B8B01CE7624D001A8253 /* Sources */,
+				A7E4B8B11CE7624D001A8253 /* Frameworks */,
+				A7E4B8B21CE7624D001A8253 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bingo for WWDC";
+			productName = "Bingo for WWDC";
+			productReference = A7E4B8B41CE7624D001A8253 /* Bingo for WWDC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A7E4B8C71CE7624D001A8253 /* Bingo for WWDCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7E4B8DF1CE7624D001A8253 /* Build configuration list for PBXNativeTarget "Bingo for WWDCTests" */;
+			buildPhases = (
+				A7E4B8C41CE7624D001A8253 /* Sources */,
+				A7E4B8C51CE7624D001A8253 /* Frameworks */,
+				A7E4B8C61CE7624D001A8253 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7E4B8CA1CE7624D001A8253 /* PBXTargetDependency */,
+			);
+			name = "Bingo for WWDCTests";
+			productName = "Bingo for WWDCTests";
+			productReference = A7E4B8C81CE7624D001A8253 /* Bingo for WWDCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A7E4B8D21CE7624D001A8253 /* Bingo for WWDCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7E4B8E21CE7624D001A8253 /* Build configuration list for PBXNativeTarget "Bingo for WWDCUITests" */;
+			buildPhases = (
+				A7E4B8CF1CE7624D001A8253 /* Sources */,
+				A7E4B8D01CE7624D001A8253 /* Frameworks */,
+				A7E4B8D11CE7624D001A8253 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7E4B8D51CE7624D001A8253 /* PBXTargetDependency */,
+			);
+			name = "Bingo for WWDCUITests";
+			productName = "Bingo for WWDCUITests";
+			productReference = A7E4B8D31CE7624D001A8253 /* Bingo for WWDCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7E4B8AC1CE7624D001A8253 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Oliver Binns";
+				TargetAttributes = {
+					A7E4B8B31CE7624D001A8253 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					A7E4B8C71CE7624D001A8253 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A7E4B8B31CE7624D001A8253;
+					};
+					A7E4B8D21CE7624D001A8253 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A7E4B8B31CE7624D001A8253;
+					};
+				};
+			};
+			buildConfigurationList = A7E4B8AF1CE7624D001A8253 /* Build configuration list for PBXProject "Bingo for WWDC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7E4B8AB1CE7624D001A8253;
+			productRefGroup = A7E4B8B51CE7624D001A8253 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7E4B8B31CE7624D001A8253 /* Bingo for WWDC */,
+				A7E4B8C71CE7624D001A8253 /* Bingo for WWDCTests */,
+				A7E4B8D21CE7624D001A8253 /* Bingo for WWDCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7E4B8B21CE7624D001A8253 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7E4B8C21CE7624D001A8253 /* LaunchScreen.storyboard in Resources */,
+				A7E4B8BF1CE7624D001A8253 /* Assets.xcassets in Resources */,
+				A7E4B8BD1CE7624D001A8253 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7E4B8C61CE7624D001A8253 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7E4B8D11CE7624D001A8253 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7E4B8B01CE7624D001A8253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7E4B8BA1CE7624D001A8253 /* ViewController.swift in Sources */,
+				A7E4B8B81CE7624D001A8253 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7E4B8C41CE7624D001A8253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7E4B8CD1CE7624D001A8253 /* Bingo_for_WWDCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7E4B8CF1CE7624D001A8253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7E4B8D81CE7624D001A8253 /* Bingo_for_WWDCUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7E4B8CA1CE7624D001A8253 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7E4B8B31CE7624D001A8253 /* Bingo for WWDC */;
+			targetProxy = A7E4B8C91CE7624D001A8253 /* PBXContainerItemProxy */;
+		};
+		A7E4B8D51CE7624D001A8253 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7E4B8B31CE7624D001A8253 /* Bingo for WWDC */;
+			targetProxy = A7E4B8D41CE7624D001A8253 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A7E4B8BB1CE7624D001A8253 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7E4B8BC1CE7624D001A8253 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A7E4B8C01CE7624D001A8253 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7E4B8C11CE7624D001A8253 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7E4B8DA1CE7624D001A8253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A7E4B8DB1CE7624D001A8253 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7E4B8DD1CE7624D001A8253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Bingo for WWDC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "oliver-binns.Bingo-for-WWDC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A7E4B8DE1CE7624D001A8253 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Bingo for WWDC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "oliver-binns.Bingo-for-WWDC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A7E4B8E01CE7624D001A8253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Bingo for WWDCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "oliver-binns.Bingo-for-WWDCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bingo for WWDC.app/Bingo for WWDC";
+			};
+			name = Debug;
+		};
+		A7E4B8E11CE7624D001A8253 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Bingo for WWDCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "oliver-binns.Bingo-for-WWDCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bingo for WWDC.app/Bingo for WWDC";
+			};
+			name = Release;
+		};
+		A7E4B8E31CE7624D001A8253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Bingo for WWDCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "oliver-binns.Bingo-for-WWDCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Bingo for WWDC";
+			};
+			name = Debug;
+		};
+		A7E4B8E41CE7624D001A8253 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Bingo for WWDCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "oliver-binns.Bingo-for-WWDCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Bingo for WWDC";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7E4B8AF1CE7624D001A8253 /* Build configuration list for PBXProject "Bingo for WWDC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E4B8DA1CE7624D001A8253 /* Debug */,
+				A7E4B8DB1CE7624D001A8253 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7E4B8DC1CE7624D001A8253 /* Build configuration list for PBXNativeTarget "Bingo for WWDC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E4B8DD1CE7624D001A8253 /* Debug */,
+				A7E4B8DE1CE7624D001A8253 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7E4B8DF1CE7624D001A8253 /* Build configuration list for PBXNativeTarget "Bingo for WWDCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E4B8E01CE7624D001A8253 /* Debug */,
+				A7E4B8E11CE7624D001A8253 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7E4B8E21CE7624D001A8253 /* Build configuration list for PBXNativeTarget "Bingo for WWDCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E4B8E31CE7624D001A8253 /* Debug */,
+				A7E4B8E41CE7624D001A8253 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7E4B8AC1CE7624D001A8253 /* Project object */;
+}
