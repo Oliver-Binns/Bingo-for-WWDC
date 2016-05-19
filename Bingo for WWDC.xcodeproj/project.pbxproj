@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A78CA2C11CEE5A0E00149D2F /* BingoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78CA2C01CEE5A0E00149D2F /* BingoCell.swift */; };
+		A78CA2C31CEE5A7800149D2F /* adjectives.json in Resources */ = {isa = PBXBuildFile; fileRef = A78CA2C21CEE5A7800149D2F /* adjectives.json */; };
 		A7E4B8B81CE7624D001A8253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4B8B71CE7624D001A8253 /* AppDelegate.swift */; };
 		A7E4B8BA1CE7624D001A8253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4B8B91CE7624D001A8253 /* ViewController.swift */; };
 		A7E4B8BD1CE7624D001A8253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E4B8BB1CE7624D001A8253 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A78CA2C01CEE5A0E00149D2F /* BingoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoCell.swift; sourceTree = "<group>"; };
+		A78CA2C21CEE5A7800149D2F /* adjectives.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = adjectives.json; path = ../adjectives.json; sourceTree = "<group>"; };
 		A7E4B8B41CE7624D001A8253 /* Bingo for WWDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bingo for WWDC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E4B8B71CE7624D001A8253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E4B8B91CE7624D001A8253 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,8 +101,10 @@
 		A7E4B8B61CE7624D001A8253 /* Bingo for WWDC */ = {
 			isa = PBXGroup;
 			children = (
+				A78CA2C21CEE5A7800149D2F /* adjectives.json */,
 				A7E4B8B71CE7624D001A8253 /* AppDelegate.swift */,
 				A7E4B8B91CE7624D001A8253 /* ViewController.swift */,
+				A78CA2C01CEE5A0E00149D2F /* BingoCell.swift */,
 				A7E4B8BB1CE7624D001A8253 /* Main.storyboard */,
 				A7E4B8BE1CE7624D001A8253 /* Assets.xcassets */,
 				A7E4B8C01CE7624D001A8253 /* LaunchScreen.storyboard */,
@@ -230,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E4B8C21CE7624D001A8253 /* LaunchScreen.storyboard in Resources */,
+				A78CA2C31CEE5A7800149D2F /* adjectives.json in Resources */,
 				A7E4B8BF1CE7624D001A8253 /* Assets.xcassets in Resources */,
 				A7E4B8BD1CE7624D001A8253 /* Main.storyboard in Resources */,
 			);
@@ -256,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78CA2C11CEE5A0E00149D2F /* BingoCell.swift in Sources */,
 				A7E4B8BA1CE7624D001A8253 /* ViewController.swift in Sources */,
 				A7E4B8B81CE7624D001A8253 /* AppDelegate.swift in Sources */,
 			);
@@ -482,6 +490,7 @@
 				A7E4B8DE1CE7624D001A8253 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7E4B8DF1CE7624D001A8253 /* Build configuration list for PBXNativeTarget "Bingo for WWDCTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +499,7 @@
 				A7E4B8E11CE7624D001A8253 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7E4B8E21CE7624D001A8253 /* Build configuration list for PBXNativeTarget "Bingo for WWDCUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +508,7 @@
 				A7E4B8E41CE7624D001A8253 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
