@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A7E4B8B31CE7624D001A8253"
-               BuildableName = "Bingo for WWDC.app"
+               BuildableName = "Bingo.app"
                BlueprintName = "Bingo for WWDC"
                ReferencedContainer = "container:Bingo for WWDC.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A7E4B8B31CE7624D001A8253"
-            BuildableName = "Bingo for WWDC.app"
+            BuildableName = "Bingo.app"
             BlueprintName = "Bingo for WWDC"
             ReferencedContainer = "container:Bingo for WWDC.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A7E4B8B31CE7624D001A8253"
-            BuildableName = "Bingo for WWDC.app"
+            BuildableName = "Bingo.app"
             BlueprintName = "Bingo for WWDC"
             ReferencedContainer = "container:Bingo for WWDC.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A7E4B8B31CE7624D001A8253"
-            BuildableName = "Bingo for WWDC.app"
+            BuildableName = "Bingo.app"
             BlueprintName = "Bingo for WWDC"
             ReferencedContainer = "container:Bingo for WWDC.xcodeproj">
          </BuildableReference>

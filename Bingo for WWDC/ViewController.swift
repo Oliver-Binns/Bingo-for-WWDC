@@ -15,20 +15,29 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	var currentAdjectives: [String] = [];
 	var colors: [UIColor] = [];
 	var currentColors: [UIColor] = [];
+	var completed = 0
+	
+	var screenshot: UIImage? = nil
 	
 	override func viewDidLoad() {
 		self.automaticallyAdjustsScrollViewInsets = false
 		super.viewDidLoad()
 		readFromJson()
-		// Do any additional setup after loading the view, typically from a nib.
+	}
+	
+	
+	override func viewDidAppear(animated: Bool) {
+		saveScreen()
 	}
 	
 	@IBAction func refreshAdjectives(sender: AnyObject) {
+		self.completed = 0
 		if((self.adjectives.count - self.currentAdjectives.count) < self.collectionView.numberOfItemsInSection(0)){
 			self.currentAdjectives = []
 		}
 		self.currentColors = []
 		self.collectionView.reloadData()
+		saveScreen()
 	}
 	
 	func readFromJson(){
@@ -75,6 +84,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 		}
 		self.currentAdjectives.append(self.adjectives[randomIndex])
 		cell.label.text = self.adjectives[randomIndex]
+		cell.label.font = UIFont.boldSystemFontOfSize(17)
 		
 		randomIndex = Int(arc4random_uniform(UInt32(self.colors.count)))
 		while(self.currentColors.contains(self.colors[randomIndex])){
@@ -82,7 +92,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 		}
 		cell.backgroundColor = self.colors[randomIndex]
 		self.currentColors.append(self.colors[randomIndex])
-		
 		return cell
 	}
 	
@@ -93,8 +102,34 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 		return CGSize(width: width, height: height);
 	}
 	
+	func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+		let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as! BingoCell
+		if(cell.label.text != "✓"){
+			let bool = cell.animateLabel()
+			if(bool){
+				self.completed += 1
+			}
+		}
+		if(self.completed == 6){
+			CompletedGameViewController.previousScreenshot = self.screenshot
+			self.navigationController?.performSegueWithIdentifier("gameCompleted", sender: self.navigationController)
+			self.refreshAdjectives(self)
+		}
+	}
+	
 	override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
 		self.collectionView.collectionViewLayout.invalidateLayout()
+	}
+	
+	func saveScreen(){
+		let layer = UIApplication.sharedApplication().keyWindow!.layer
+		let scale = UIScreen.mainScreen().scale
+		UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
+		layer.renderInContext(UIGraphicsGetCurrentContext()!)
+		let imageView = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		//UIImageWriteToSavedPhotosAlbum(imageView, nil, nil, nil); //if you need to save
+		self.screenshot = imageView
 	}
 }
 

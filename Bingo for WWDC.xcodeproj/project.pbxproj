@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A709951E1CF05CF100D10DD6 /* CompletedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A709951D1CF05CF100D10DD6 /* CompletedGameViewController.swift */; };
 		A78CA2C11CEE5A0E00149D2F /* BingoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78CA2C01CEE5A0E00149D2F /* BingoCell.swift */; };
 		A78CA2C31CEE5A7800149D2F /* adjectives.json in Resources */ = {isa = PBXBuildFile; fileRef = A78CA2C21CEE5A7800149D2F /* adjectives.json */; };
 		A7E4B8B81CE7624D001A8253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4B8B71CE7624D001A8253 /* AppDelegate.swift */; };
@@ -36,9 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A709951D1CF05CF100D10DD6 /* CompletedGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedGameViewController.swift; sourceTree = "<group>"; };
 		A78CA2C01CEE5A0E00149D2F /* BingoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoCell.swift; sourceTree = "<group>"; };
 		A78CA2C21CEE5A7800149D2F /* adjectives.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = adjectives.json; path = ../adjectives.json; sourceTree = "<group>"; };
-		A7E4B8B41CE7624D001A8253 /* Bingo for WWDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bingo for WWDC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E4B8B41CE7624D001A8253 /* Bingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E4B8B71CE7624D001A8253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E4B8B91CE7624D001A8253 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A7E4B8BC1CE7624D001A8253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 		A7E4B8B51CE7624D001A8253 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A7E4B8B41CE7624D001A8253 /* Bingo for WWDC.app */,
+				A7E4B8B41CE7624D001A8253 /* Bingo.app */,
 				A7E4B8C81CE7624D001A8253 /* Bingo for WWDCTests.xctest */,
 				A7E4B8D31CE7624D001A8253 /* Bingo for WWDCUITests.xctest */,
 			);
@@ -106,6 +108,7 @@
 				A7E4B8B91CE7624D001A8253 /* ViewController.swift */,
 				A78CA2C01CEE5A0E00149D2F /* BingoCell.swift */,
 				A7E4B8BB1CE7624D001A8253 /* Main.storyboard */,
+				A709951D1CF05CF100D10DD6 /* CompletedGameViewController.swift */,
 				A7E4B8BE1CE7624D001A8253 /* Assets.xcassets */,
 				A7E4B8C01CE7624D001A8253 /* LaunchScreen.storyboard */,
 				A7E4B8C31CE7624D001A8253 /* Info.plist */,
@@ -148,7 +151,7 @@
 			);
 			name = "Bingo for WWDC";
 			productName = "Bingo for WWDC";
-			productReference = A7E4B8B41CE7624D001A8253 /* Bingo for WWDC.app */;
+			productReference = A7E4B8B41CE7624D001A8253 /* Bingo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A7E4B8C71CE7624D001A8253 /* Bingo for WWDCTests */ = {
@@ -265,6 +268,7 @@
 			files = (
 				A78CA2C11CEE5A0E00149D2F /* BingoCell.swift in Sources */,
 				A7E4B8BA1CE7624D001A8253 /* ViewController.swift in Sources */,
+				A709951E1CF05CF100D10DD6 /* CompletedGameViewController.swift in Sources */,
 				A7E4B8B81CE7624D001A8253 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,7 +414,7 @@
 				INFOPLIST_FILE = "Bingo for WWDC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oliver-binns.Bingo-for-WWDC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Bingo;
 			};
 			name = Debug;
 		};
@@ -421,7 +425,7 @@
 				INFOPLIST_FILE = "Bingo for WWDC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oliver-binns.Bingo-for-WWDC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Bingo;
 			};
 			name = Release;
 		};
