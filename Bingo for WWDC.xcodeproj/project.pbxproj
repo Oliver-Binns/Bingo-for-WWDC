@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A709951E1CF05CF100D10DD6 /* CompletedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A709951D1CF05CF100D10DD6 /* CompletedGameViewController.swift */; };
+		A711A9051D0388EB006C595F /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711A9041D0388EB006C595F /* CountdownViewController.swift */; };
+		A711A9071D038F89006C595F /* ServerConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711A9061D038F89006C595F /* ServerConfigs.swift */; };
+		A711A9091D03900B006C595F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A711A9081D03900B006C595F /* .gitignore */; };
 		A78CA2C11CEE5A0E00149D2F /* BingoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78CA2C01CEE5A0E00149D2F /* BingoCell.swift */; };
 		A78CA2C31CEE5A7800149D2F /* adjectives.json in Resources */ = {isa = PBXBuildFile; fileRef = A78CA2C21CEE5A7800149D2F /* adjectives.json */; };
 		A7E4B8B81CE7624D001A8253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4B8B71CE7624D001A8253 /* AppDelegate.swift */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		A709951D1CF05CF100D10DD6 /* CompletedGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedGameViewController.swift; sourceTree = "<group>"; };
+		A711A9041D0388EB006C595F /* CountdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
+		A711A9061D038F89006C595F /* ServerConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerConfigs.swift; sourceTree = "<group>"; };
+		A711A9081D03900B006C595F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A78CA2C01CEE5A0E00149D2F /* BingoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoCell.swift; sourceTree = "<group>"; };
 		A78CA2C21CEE5A7800149D2F /* adjectives.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = adjectives.json; path = ../adjectives.json; sourceTree = "<group>"; };
 		A7E4B8B41CE7624D001A8253 /* Bingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,7 @@
 		A7E4B8AB1CE7624D001A8253 = {
 			isa = PBXGroup;
 			children = (
+				A711A9081D03900B006C595F /* .gitignore */,
 				A7E4B8B61CE7624D001A8253 /* Bingo for WWDC */,
 				A7E4B8CB1CE7624D001A8253 /* Bingo for WWDCTests */,
 				A7E4B8D61CE7624D001A8253 /* Bingo for WWDCUITests */,
@@ -105,8 +112,10 @@
 			children = (
 				A78CA2C21CEE5A7800149D2F /* adjectives.json */,
 				A7E4B8B71CE7624D001A8253 /* AppDelegate.swift */,
+				A711A9061D038F89006C595F /* ServerConfigs.swift */,
 				A7E4B8B91CE7624D001A8253 /* ViewController.swift */,
 				A78CA2C01CEE5A0E00149D2F /* BingoCell.swift */,
+				A711A9041D0388EB006C595F /* CountdownViewController.swift */,
 				A7E4B8BB1CE7624D001A8253 /* Main.storyboard */,
 				A709951D1CF05CF100D10DD6 /* CompletedGameViewController.swift */,
 				A7E4B8BE1CE7624D001A8253 /* Assets.xcassets */,
@@ -238,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A711A9091D03900B006C595F /* .gitignore in Resources */,
 				A7E4B8C21CE7624D001A8253 /* LaunchScreen.storyboard in Resources */,
 				A78CA2C31CEE5A7800149D2F /* adjectives.json in Resources */,
 				A7E4B8BF1CE7624D001A8253 /* Assets.xcassets in Resources */,
@@ -267,8 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A78CA2C11CEE5A0E00149D2F /* BingoCell.swift in Sources */,
+				A711A9051D0388EB006C595F /* CountdownViewController.swift in Sources */,
 				A7E4B8BA1CE7624D001A8253 /* ViewController.swift in Sources */,
 				A709951E1CF05CF100D10DD6 /* CompletedGameViewController.swift in Sources */,
+				A711A9071D038F89006C595F /* ServerConfigs.swift in Sources */,
 				A7E4B8B81CE7624D001A8253 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

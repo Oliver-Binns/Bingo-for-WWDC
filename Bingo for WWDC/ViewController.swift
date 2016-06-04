@@ -12,6 +12,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
 	@IBOutlet var collectionView: UICollectionView!
 	var adjectives: [String] = [];
+	var usedAdjectives: [String] = [];
 	var currentAdjectives: [String] = [];
 	var colors: [UIColor] = [];
 	var currentColors: [UIColor] = [];
@@ -28,15 +29,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	
 	override func viewDidAppear(animated: Bool) {
 		saveScreen()
+		self.navigationController?.performSegueWithIdentifier("waitingForEvent", sender: self.navigationController)
 	}
 	
 	@IBAction func refreshAdjectives(sender: AnyObject) {
 		self.completed = 0
-		if((self.adjectives.count - self.currentAdjectives.count) < self.collectionView.numberOfItemsInSection(0)){
-			self.currentAdjectives = []
+		self.currentAdjectives = [];
+		if((self.adjectives.count - self.usedAdjectives.count) < self.collectionView.numberOfItemsInSection(0)){
+			self.usedAdjectives = []
 		}
 		self.currentColors = []
-		self.collectionView.reloadData()
+		self.collectionView.reloadData();
 		saveScreen()
 	}
 	
@@ -61,11 +64,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 		}
 	}
 
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
 	func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
 		return 1
 	}
@@ -79,9 +77,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 		let maxIndex = self.adjectives.count
 		var randomIndex = Int(arc4random_uniform(UInt32(maxIndex)))
 		
-		while(self.currentAdjectives.contains(self.adjectives[randomIndex])){
+		while(self.usedAdjectives.contains(self.adjectives[randomIndex])){
 			randomIndex = Int(arc4random_uniform(UInt32(maxIndex)))
 		}
+		self.usedAdjectives.append(self.adjectives[randomIndex])
 		self.currentAdjectives.append(self.adjectives[randomIndex])
 		cell.label.text = self.adjectives[randomIndex]
 		cell.label.font = UIFont.boldSystemFontOfSize(17)
@@ -111,9 +110,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 			}
 		}
 		if(self.completed == 6){
-			CompletedGameViewController.previousScreenshot = self.screenshot
+			CompletedGameViewController.controller = self
 			self.navigationController?.performSegueWithIdentifier("gameCompleted", sender: self.navigationController)
-			self.refreshAdjectives(self)
 		}
 	}
 	
