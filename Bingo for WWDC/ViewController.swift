@@ -17,6 +17,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	var colors: [UIColor] = [];
 	var currentColors: [UIColor] = [];
 	var completed = 0
+	static var session = "";
 	
 	var screenshot: UIImage? = nil
 	
@@ -25,7 +26,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 		super.viewDidLoad()
 		readFromJson()
 	}
-	
 	
 	override func viewDidAppear(animated: Bool) {
 		saveScreen()

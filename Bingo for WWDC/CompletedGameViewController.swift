@@ -10,22 +10,39 @@ import UIKit
 
 class CompletedGameViewController: UIViewController {
 	static var controller: ViewController?
+	static var score_id: Int?
+	
 	var result = -1
 	var session = ""
+	var screenshot: UIImage?
 	
+	@IBOutlet var disqualified: UILabel!
+	@IBOutlet var youPlacedLabel: UILabel!
 	@IBOutlet var completedView: UIView!
 	@IBOutlet var loadingSpinner: UIActivityIndicatorView!
+	@IBOutlet var positionLabel: UILabel!
+	@IBOutlet var shareButton: UIButton!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		getPosition();
+		
+		if(CompletedGameViewController.score_id == nil){
+			getPosition();
+		}else{
+			checkPosition();
+		}
         // Do any additional setup after loading the view.
     }
+	
+	func checkPosition(){
+		let params = [
+			"password":ServerConfigs.PASSWORD,
+			"score_id": CompletedGameViewController.score_id!
+			] as Dictionary<String, Any>
+		makeRequest(params)
+	}
 
 	func getPosition(){
-		let request = NSMutableURLRequest(URL: NSURL(string: ServerConfigs.URL + "wwdc_bingo/game_completed.php")!)
-		let session = NSURLSession.sharedSession()
-		request.HTTPMethod = "POST"
 		let params = [
 			"password":ServerConfigs.PASSWORD,
 			"phrase0": CompletedGameViewController.controller?.currentAdjectives[0],
@@ -35,35 +52,15 @@ class CompletedGameViewController: UIViewController {
 			"phrase4": CompletedGameViewController.controller?.currentAdjectives[4],
 			"phrase5": CompletedGameViewController.controller?.currentAdjectives[5]
 			] as Dictionary<String, Any>
-		request.setBodyContent(params);
-		request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") //Optional
-		
-		let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-			do{
-				let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as! NSDictionary
-				if let integer = json["position"] as? Int{
-					self.result = integer;
-				}
-				if let session_name = json["session"] as? String{
-					self.session = session_name;
-				}
-				print("Success: \(json)")
-				dispatch_async(dispatch_get_main_queue(),{
-					self.loadingSpinner.stopAnimating()
-					self.completedView.hidden = false;
-				})
-			}catch let error as NSError{
-				print(error.localizedDescription)
-				let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-				print("Error could not parse JSON: '\(jsonStr)'")
-			}
-		})
-		task.resume()
+		makeRequest(params);
 	}
 	
 	@IBAction func shareResult(sender: AnyObject) {
 		let hashtag = "#"+self.session.stringByReplacingOccurrencesOfString(" ", withString: "");
-		let shareSheet = UIActivityViewController(activityItems: ["I came",result.toPosition(),"playing along at",hashtag,"with Keynote Bingo!", (CompletedGameViewController.controller?.screenshot!)!, NSURL(string: "https://itunes.apple.com/us/app/bingo-for-wwdc/id1114302685")!], applicationActivities: nil)
+		if(self.screenshot == nil){
+			self.screenshot = CompletedGameViewController.controller?.screenshot!
+		}
+		let shareSheet = UIActivityViewController(activityItems: ["I came",result.toPosition(),"playing along at",hashtag,"with Keynote Bingo!", self.screenshot!, NSURL(string: "https://itunes.apple.com/us/app/bingo-for-wwdc/id1114302685")!], applicationActivities: nil)
 		presentViewController(shareSheet, animated: true, completion: nil)
 	}
 	
@@ -75,6 +72,75 @@ class CompletedGameViewController: UIViewController {
 	@IBAction func dismissController(sender: AnyObject) {
 		self.dismissViewControllerAnimated(true, completion: nil)
 		CompletedGameViewController.controller?.refreshAdjectives(self);
+	}
+	
+	func makeRequest(params: Dictionary<String, Any>){
+		let request = NSMutableURLRequest(URL: NSURL(string: ServerConfigs.URL + "wwdc_bingo/game_completed.php")!)
+		let session = NSURLSession.sharedSession()
+		request.HTTPMethod = "POST"
+		
+		request.setBodyContent(params);
+		request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") //Optional
+		
+		let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+			do{
+				let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as! NSDictionary
+				let defaults = NSUserDefaults();
+				
+				if let integer = json["position"] as? Int{
+					self.result = integer;
+					
+					dispatch_async(dispatch_get_main_queue(),{
+						self.positionLabel.text = self.result.toPosition();
+					})
+				}
+				
+				if let session_name = json["session"] as? String{
+					self.session = session_name;
+					
+					if(CompletedGameViewController.controller?.screenshot != nil){
+						let screenshot_data = UIImagePNGRepresentation((CompletedGameViewController.controller?.screenshot)!);
+						defaults.setObject(screenshot_data, forKey: session_name)
+					}else{
+						let screenshot_data = defaults.objectForKey(session_name) as! NSData;
+						self.screenshot = UIImage(data: screenshot_data);
+					}
+					
+					if let update_id = json["update_id"] as? Int{
+						//Save id..
+						var positions = defaults.objectForKey("scores") as? Dictionary<String, Int>
+						if(positions == nil){
+							positions = Dictionary<String, Int>()
+						}
+						
+						positions?.updateValue(update_id, forKey: session_name)
+						defaults.setObject(positions, forKey: "scores")
+					}
+				}
+					
+				if let verified = json["verified"] as? Int{
+					if(verified != 1){
+						dispatch_async(dispatch_get_main_queue(),{
+							self.positionLabel.text = ":(";
+							self.positionLabel.textColor = UIColor.init(red: 241/255.0, green: 0, blue: 29/255.0, alpha: 1);
+							self.youPlacedLabel.text = "You Cheated";
+							self.disqualified.text = "Disqualified";
+							self.shareButton.hidden = true;
+						});
+					}
+				}
+				
+				dispatch_async(dispatch_get_main_queue(),{
+					self.loadingSpinner.stopAnimating()
+					self.completedView.hidden = false;
+				})
+			}catch let error as NSError{
+				print(error.localizedDescription)
+				let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
+				print("Error could not parse JSON: '\(jsonStr)'")
+			}
+		})
+		task.resume()
 	}
 }
 
