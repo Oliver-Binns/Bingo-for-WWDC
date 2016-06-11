@@ -8,7 +8,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Wcx-lT-ubZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JSh-Gv-9KJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="e89-km-Fpe" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="CFA-iS-U6S">
@@ -19,10 +18,11 @@
                         <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="SpE-77-PrD"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JSh-Gv-9KJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-638" y="375"/>
         </scene>
-        <!--Bingo for WWDC-->
+        <!--Keynote Bingo-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.16078431372549018" green="0.16470588235294117" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bingo for WWDC" id="oa7-yE-zo4"/>
+                    <navigationItem key="navigationItem" title="Keynote Bingo" id="oa7-yE-zo4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

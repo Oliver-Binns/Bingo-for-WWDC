@@ -28,8 +28,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	}
 	
 	override func viewDidAppear(animated: Bool) {
+		UIApplication.sharedApplication().idleTimerDisabled = true;
 		saveScreen()
 		self.navigationController?.performSegueWithIdentifier("waitingForEvent", sender: self.navigationController)
+	}
+	
+	override func viewDidDisappear(animated: Bool) {
+		UIApplication.sharedApplication().idleTimerDisabled = false;
 	}
 	
 	@IBAction func refreshAdjectives(sender: AnyObject) {

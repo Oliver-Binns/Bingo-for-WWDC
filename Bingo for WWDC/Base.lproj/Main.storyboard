@@ -26,7 +26,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bingo for WWDC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="lZ9-Ka-FSa">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keynote Bingo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="lZ9-Ka-FSa">
                                             <rect key="frame" x="8" y="28" width="584" height="42"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                             <color key="textColor" red="0.0" green="0.68627450980392157" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
@@ -283,7 +283,7 @@
             </objects>
             <point key="canvasLocation" x="-402" y="1044"/>
         </scene>
-        <!--Bingo for WWDC-->
+        <!--Keynote Bingo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bingo" customModuleProvider="target" sceneMemberID="viewController">
@@ -347,7 +347,7 @@
                             <constraint firstItem="nrl-ZQ-9Gk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="wdP-Qq-AZq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Bingo for WWDC" id="4ym-Gm-3zu">
+                    <navigationItem key="navigationItem" title="Keynote Bingo" id="4ym-Gm-3zu">
                         <barButtonItem key="rightBarButtonItem" id="7Cx-vj-iO1">
                             <connections>
                                 <action selector="refreshAdjectives:" destination="BYZ-38-t0r" id="dUq-dY-b0C"/>

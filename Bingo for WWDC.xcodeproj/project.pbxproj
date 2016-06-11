@@ -211,6 +211,7 @@
 				TargetAttributes = {
 					A7E4B8B31CE7624D001A8253 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Z86DH46P79;
 					};
 					A7E4B8C71CE7624D001A8253 = {
 						CreatedOnToolsVersion = 7.3;
@@ -423,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Bingo for WWDC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oliver-binns.Bingo-for-WWDC";
@@ -434,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Bingo for WWDC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oliver-binns.Bingo-for-WWDC";
